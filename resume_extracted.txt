@@ -1,0 +1,169 @@
+•At least 4 years of working experience Java , JavaScript, CSS, Angular •At least 4 years of JavaScript and HTML5, CSS precompilers like Sass and LESS •Deep knowledge of AngularJS practices and commonly used modules 
+based on extensive work experience (MEAN, and server-side technologies like Node.js., JavaScript frameworks with JS-based build tools like Grunt, Gulp, and Bower •Skills in one or more chosen frameworks/libraries like 
+jQuery or Bootstrap, AJAX (Asynchronous JavaScript and XML) •Extensive knowledge of CSS and JS methods for providing performant visual effects and keeping the framerate above 30fps at all times •Thorough understanding 
+of the responsibilities of the platform, database, API, caching layer, proxies, and other web services used in the system •Validating user actions on the client side and providing responsive feedback • Ability to work in team in 
+diverse/ multiple stakeholder environment • Experience and desire to work in a Global delivery environmentaA degree in Computer Science or equivalent experience (MS, or BS with 1+ years of experience) 2+ years 
+developing software using C#, C and C++ (required). Past experience working in Big Data projects is a strong plus. Past experience working in ML/AI projects is a plus. Technical experience in designing, coding, and reviewing 
+robust, scalable, understandable code. A strong focus on engineering excellence (best practices, design/code reviews, clear and maintainable code). Strong communication and collaboration skills: working closely with PM and 
+the rest of the team. Strong foundation in Object Oriented Programming and Design Patterns Experience with AWS (preferred: EC2, S3, API Gateway, Lambda Functions, Machine Learning) Web development skills – experience 
+with HTML 5, CSS 3, JavaScript, JavaScript frameworks (AngularJS, jQuery), Bootstrap, LESS and other Web 2.0 technologies Experience in one or more of the following; JavaScript, Python, C#, Java, Kotlin, Swift Experience with 
+agile methodologies Experience with web services (REST) Database experience required (SQL, No-SQL, Document) Familiar with JavaScript unit test script frameworks. Excellent problem solving and analytical skills Must be 
+self-starter and self-motivated Have a curiosity for new technology trends Good communicator, keen to collaborate and share knowledge Experience seeing projects through from start to finish Ability to collaborate 
+WORK EXPERIENCE 
+Software Engineer (Trainee) 
+JPMORGAN CHASE & CO.  
+▪ Completed project setup, Kafka integration, and H2 database tasks. 
+▪ Developed and tested REST APIs using Spring Boot. 
+▪ Implemented event-driven architecture with Kafka consumers. 
+▪ Worked with JPA for database operations and transaction management. 
+▪ Gained practical experience in software engineering best practices and API development.  
+ 
+AWS Solutions Architecture (Trainee) 
+AWS APAC Program 
+▪ Completed AWS cloud architecture training focused on scalable solutions. 
+▪ Gained hands-on experience with EC2, S3, Lambda, and VPC services. 
+▪ Designed demo AWS environments simulating real business needs. 
+▪ Enhanced skills in cloud-native application design and automation.  
+ 
+Machine Learning Engineer & Full Stack Developer  
+Freelance 
+▪ Engineered and fine-tuned custom ML models to automate business workflows for enterprise 
+clients 
+▪ Designed scalable REST APIs to serve Machine Learning models to web and mobile clients, 
+ensuring seamless frontend-backend integration 
+ 
+Machine Learning Engineer  
+Ecosync Nexus – (Lucknow) 
+▪ Architected the end-to-end ML pipeline for an IoT energy management system, integrating 
+predictive models with Android and Web clients for real-time control 
+▪ Engineered and deployed predictive energy models using XGBoost and PyTorch, optimizing for 
+low-latency inference on edge devices. 
+ 
+Machine Learning Engineer  
+GSSOC Contributor  
+▪ Contributed to the official SciPy library by rectifying mathematical inconsistencies in the 
+sparse.linalg.eigsh documentation (PR #18214), ensuring accurate operator definitions for 
+eigenvalue computations.  
+ 
+11/2024 – 11/2024 
+         Param Singh 
+           INDIA 
+10/2024 – 11/2024 
+Contact 
+ 91+ XXXXXXXXXX 
+paramsingh1810@gmail.com 
+linkedin.com/in/paramsingh7 
+Github.com/ParamSingh24 
+Summary 
+ 
+Results oriented Machine Learning 
+Engineer focused on building production 
+grade AI applications. Proficient in 
+optimizing Deep Learning models for real-
+time inference and integrating them into 
+complex web architectures. Leverages a 
+strong background in Data Analysis to 
+drive model accuracy through rigorous 
+data preprocessing and validation. 
+dedicated to implementing MLOps best 
+practices (CI/CD, Docker) to deliver robust, 
+scalable, and secure intelligent systems. EDUCATION 
+Bachelor of Technology: Computer Science Engineering (AI) 
+Babu Banarasi Das University at Lucknow 
+Topper of class with CGPA 9.33 
+Dean's List, Multiple Hackathons Winner, 
+ 
+Outstanding Personality, Multiple Hackathons Winner  
+ 
+07/2024 – 07/2028 Skills 
+▪ Java, C++, Python, SQL 
+▪ PyTorch, TensorFlow, LLM/RAG, 
+NLP, YOLOv8 
+▪ Pandas, NumPy, MySQL, Google 
+Cloud  
+▪ Algorithms & Data Structures 
+▪ RESTful & GraphQL APIs 
+▪ Docker, CI/CD, Git, AWS 
+▪ OOP , Design Patterns 
+▪ DevOps , Cloud Services 
+▪ DATABASE DESIGN 
+▪ DEBUG AND DOCUMENTATION  
+▪ TECH SUPPORT , TEAM LEAD  
+▪ GIT , GRADLE  
+ 
+PROJECTS
+  
+Certifications 
+ Certified Software Engineer 
+ Certified Machine Learning Engineer 
+ 
+ 
+▪ Guardian Model: Engineered a real-time harassment detection pipeline using YOLOv8 and OpenCV to 
+identify violations and trigger instant automated email alerts via smtplib 
+YOLOv8 | Python | OpenCV | Pygame | smtplib | Numpy | PyTorch | TensorFlow  
+▪ Washington Guardian: Built a disease outbreak detection system using Time-Series Analysis  
+| Python | Git | Google Cloud Console | Pandas | Numpy |PyTorch | TensorFlow | Scikit-learn  
+▪ Informatica Compliance Guardian: Automated regulatory compliance auditing using NLP  
+Informatica cloud services | Javascript | Web  
+▪ CareerPulse: content-based recommendation engine using TensorFlow to suggest career paths. 
+Javascript | PyTorch | TensorFlow | Google Cloud Console | Firebase Studio | CI/CD 
+ 
+ 
+ACCOMPLISHMENTS 
+ ▪ Winner of theme "AI and Robotics for Disaster Management" by Washington University of 
+Science and Technology (WUST) 
+▪ Selected in Top 30 across India for Sustainovation Hackathon 2025 by Intin 
+▪ Finalist in the Integration for AI/GenAI Global Hackathon by Informatica 
+▪ 1st Winner of Hackathon 2025 by BBD University 
+▪ Ideation Finalist by SCRS Florida International University 
+▪ Finalist of SmallestAI hackathon by Smallest.ai, California  
+ 
+08/2025 – Present 
+09/2024 – Present 
+10/2025 – 10/2025 
+ 
+    
+   
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
