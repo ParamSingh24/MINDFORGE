@@ -61,8 +61,8 @@ export const getGeminiResponse = async (
 ): Promise<string> => {
 
     // HYBRID MODE:
-    // If in PRODUCTION (or keys are missing locally), try the Backend API.
-    // We prefer Backend API for security in Prod.
+    // If in PRODUCTION, use Backend API.
+    // If in DEV, strictly use client-side keys (Vercel functions don't run in `npm run dev` without Vercel CLI).
     const isDev = import.meta.env.DEV;
 
     if (!isDev) {
@@ -77,17 +77,23 @@ export const getGeminiResponse = async (
             });
 
             if (!response.ok) {
-                throw new Error(`API Error: ${response.statusText}`);
+                // If backend fails (e.g. 404 in local preview without functions), fall back to client
+                console.warn("Backend API failed, trying client-side fallback...");
+                throw new Error("Backend failed");
             }
 
             const data = await response.json();
             return data.text;
         } catch (error) {
-            console.error("Backend API Error:", error);
-            // Fallback to client-side if API fails? Maybe unsafe, but if keys exist...
-            // For now, return error or try client-side as last resort if keys are present.
-            if (GEMINI_KEYS.length === 0) return "I'm having trouble connecting to the neural core. Please try again later.";
+            console.error("Backend API Error, falling back to client keys:", error);
+            // Fallthrough to client logic below if backend fails
         }
+    }
+
+    // FALLBACK / DEV MODE
+    if (GEMINI_KEYS.length === 0) {
+        console.error("DEV MODE ERROR: No VITE_GEMINI_KEY_* found. Check .env.");
+        return "System Alert: Neural Link Disconnected (Missing API Keys).";
     }
 
     // CLIENT-SIDE FALLBACK (Default for Dev)

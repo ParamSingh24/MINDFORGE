@@ -63,37 +63,37 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-24 px-6 relative">
+    <section id="services" className="py-24 px-4 md:px-6 relative">
       <div className="absolute inset-0 bg-mindforge-black/50 pointer-events-none" />
       <div className="container mx-auto max-w-7xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-20"
+          className="text-center mb-12 md:mb-20"
         >
-          <h2 className="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 mb-6">
+          <h2 className="text-3xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 mb-4 md:mb-6">
             <InteractiveText text="MindForge Service Catalog" />
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light">
+          <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto font-light">
             <InteractiveText text="Architecting the future with Agentic AI and Spatial Computing." />
           </p>
         </motion.div>
 
         <ScrollStack>
           {services.map((service, index) => (
-            <ScrollStackItem key={service.title} className="glass border border-white/5 hover:border-mindforge-neon/30 h-[400px]">
+            <ScrollStackItem key={service.title} className="glass border border-white/5 hover:border-mindforge-neon/30 h-auto min-h-[300px] md:min-h-[400px]">
               <div className="flex flex-col h-full">
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-14 h-14 bg-white/5 rounded-xl flex items-center justify-center group-hover:bg-mindforge-neon/10 transition-colors duration-300">
-                    <service.icon className="w-8 h-8 text-mindforge-neon group-hover:text-white transition-colors duration-300" />
+                <div className="flex items-center space-x-3 md:space-x-4 mb-4 md:mb-6">
+                  <div className="w-10 h-10 md:w-14 md:h-14 bg-white/5 rounded-xl flex items-center justify-center group-hover:bg-mindforge-neon/10 transition-colors duration-300 flex-shrink-0">
+                    <service.icon className="w-5 h-5 md:w-8 md:h-8 text-mindforge-neon group-hover:text-white transition-colors duration-300" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white">
+                  <h3 className="text-lg md:text-2xl font-bold text-white leading-tight">
                     {service.title}
                   </h3>
                 </div>
 
-                <p className="text-gray-400 mb-8 leading-relaxed text-sm flex-grow">
+                <p className="text-gray-400 mb-4 md:mb-8 leading-relaxed text-xs md:text-base flex-grow">
                   {service.description}
                 </p>
 

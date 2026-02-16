@@ -42,10 +42,10 @@ const Testimonials = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white"><InteractiveText text="Loved by" /></h2>
-          <p className="text-lg text-gray-400 mt-4"><InteractiveText text={"Don't just take our word for it. Here's what our clients have to say."} /></p>
+          <h2 className="text-3xl md:text-5xl font-extrabold text-white"><InteractiveText text="Loved by" /></h2>
+          <p className="text-base md:text-lg text-gray-400 mt-4 px-4"><InteractiveText text={"Don't just take our word for it. Here's what our clients have to say."} /></p>
         </motion.div>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.name}
@@ -54,13 +54,13 @@ const Testimonials = () => {
               whileInView="onscreen"
               viewport={{ once: true, amount: 0.5 }}
               variants={cardVariants}
-              className="p-8 rounded-2xl bg-card/50 backdrop-blur-sm border border-white/10"
+              className="p-6 md:p-8 rounded-2xl bg-card/50 backdrop-blur-sm border border-white/10"
             >
-              <p className="text-gray-300 italic mb-6"><InteractiveText text={`"${testimonial.quote}"`} /></p>
+              <p className="text-sm md:text-base text-gray-300 italic mb-4 md:mb-6"><InteractiveText text={`"${testimonial.quote}"`} /></p>
               <div className="flex items-center">
                 {/* <img src={testimonial.avatar} alt={testimonial.name} className="w-12 h-12 rounded-full mr-4" /> */}
                 <div>
-                  <p className="font-bold text-white"><InteractiveText text={testimonial.name} /></p>
+                  <p className="font-bold text-white text-sm md:text-base"><InteractiveText text={testimonial.name} /></p>
                   {/* <p className="text-sm text-gray-400">{testimonial.company}</p> */}
                 </div>
               </div>

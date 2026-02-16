@@ -89,7 +89,7 @@ const FloatingLinesShader = () => {
 
 const FloatingLines = () => {
     return (
-        <div className="w-full h-full absolute inset-0 -z-20 pointer-events-none opacity-40">
+        <div className="w-full h-full absolute inset-0 -z-20 pointer-events-none opacity-60">
             <Canvas camera={{ position: [0, 0, 5] }}>
                 <FloatingLinesShader />
             </Canvas>

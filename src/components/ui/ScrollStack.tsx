@@ -31,7 +31,7 @@ export const ScrollStackItem: React.FC<ScrollStackItemProps> = ({
     // No, sticky breaks standard IntersectionObservers often.
 
     // Let's use the Parent Progress injection which is reliable.
-    const targetScale = 1 - (total - i) * 0.05;
+    const targetScale = 1 - (total - i) * 0.02;
 
     // We want to scale from 1 to targetScale as the scroll progresses past this card.
     // The range for card `i` is roughly `i / total` to `(i + 1) / total`.
@@ -60,7 +60,7 @@ export const ScrollStackItem: React.FC<ScrollStackItemProps> = ({
         >
             <motion.div
                 style={finalStyle}
-                className={`w-full h-full bg-black/20 backdrop-blur-md border border-white/5 p-12 rounded-[40px] shadow-[0_0_30px_rgba(0,0,0,0.1)] overflow-hidden origin-top`}
+                className={`w-full h-full bg-black/20 backdrop-blur-md border border-white/5 p-6 md:p-12 rounded-[30px] md:rounded-[40px] shadow-[0_0_30px_rgba(0,0,0,0.1)] overflow-hidden origin-top`}
             >
                 {children}
             </motion.div>
@@ -107,6 +107,7 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
                 }
                 return child;
             })}
+            <div className="h-[50vh]" /> {/* Spacer to ensure last item stacks */}
         </div>
     );
 };

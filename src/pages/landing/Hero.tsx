@@ -39,10 +39,10 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex flex-col items-center"
         >
-          <h1 className="text-5xl md:text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400 leading-tight mb-6 tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400 leading-tight mb-6 tracking-tight px-4">
             {headline.title}
           </h1>
-          <span className="text-4xl md:text-6xl font-bold text-white block mb-8">
+          <span className="text-2xl sm:text-3xl md:text-6xl font-bold text-white block mb-8 px-4">
             {headline.subtitle}
           </span>
         </motion.div>
@@ -51,7 +51,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 font-light"
+          className="text-lg md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 font-light px-4"
         >
           Specializing in{" "}
           <span className="text-white font-medium">Agentic AI</span> and{" "}
