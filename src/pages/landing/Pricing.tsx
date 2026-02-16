@@ -1,75 +1,47 @@
 import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check, Info } from "lucide-react";
-import { Switch } from "@/components/ui/switch";
-import ShineBorder from "@/components/ui/ShineBorder";
 
-const pricingPlans = {
-  monthly: [
-    {
-      name: "Starter",
-      price: 49,
-      features: ["5 Pages", "Basic SEO", "Standard Support"],
-    },
-    {
-      name: "Business",
-      price: 99,
-      features: [
-        "10 Pages",
-        "Advanced SEO",
-        "Priority Support",
-        "CMS Integration",
-      ],
-      popular: true,
-    },
-    {
-      name: "Enterprise",
-      price: 199,
-      features: [
-        "Unlimited Pages",
-        "Full SEO Suite",
-        "24/7 Support",
-        "Custom API",
-      ],
-    },
-  ],
-  yearly: [
-    {
-      name: "Starter",
-      price: 490,
-      features: ["5 Pages", "Basic SEO", "Standard Support"],
-    },
-    {
-      name: "Business",
-      price: 990,
-      features: [
-        "10 Pages",
-        "Advanced SEO",
-        "Priority Support",
-        "CMS Integration",
-      ],
-      popular: true,
-    },
-    {
-      name: "Enterprise",
-      price: 1990,
-      features: [
-        "Unlimited Pages",
-        "Full SEO Suite",
-        "24/7 Support",
-        "Custom API",
-      ],
-    },
-  ],
-};
+const plans = [
+  {
+    name: "MVP / Audit",
+    price: "$100",
+    description: "Perfect for technical audits or simple MVPs.",
+    features: [
+      "Technical Audit & Roadmap",
+      "Basic Landing Page or Script",
+      "1 Month Support",
+    ],
+    popular: false,
+  },
+  {
+    name: "Standard Growth",
+    price: "$200",
+    description: "Serious automation and development for growing businesses.",
+    features: [
+      "Advanced Agentic Workflow",
+      "Full Stack Web App (Next.js)",
+      "SEO & Performance Optimization",
+    ],
+    popular: true,
+  },
+  {
+    name: "Enterprise Scale",
+    price: "$350",
+    description: "Full-scale digital transformation and dedicated engineering.",
+    features: [
+      "Custom AI Model Training",
+      "Complex SaaS Platform",
+      "Dedicated 24/7 Support Channel",
+    ],
+    popular: false,
+  },
+];
 
 const Pricing = () => {
-  const [isYearly, setIsYearly] = useState(false);
   const [hoveredPlan, setHoveredPlan] = useState<string | null>(null);
   const [showTooltip, setShowTooltip] = useState<string | null>(null);
   const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-
-  const plans = isYearly ? pricingPlans.yearly : pricingPlans.monthly;
 
   const handleMouseEnter = (planName: string) => {
     setHoveredPlan(planName);
@@ -106,21 +78,7 @@ const Pricing = () => {
           </p>
         </motion.div>
 
-        <div className="flex items-center justify-center space-x-4 mb-12">
-          <span
-            className={`font-medium ${!isYearly ? "text-white" : "text-gray-400"
-              }`}
-          >
-            Monthly
-          </span>
-          <Switch checked={isYearly} onCheckedChange={setIsYearly} />
-          <span
-            className={`font-medium ${isYearly ? "text-white" : "text-gray-400"
-              }`}
-          >
-            Yearly (Save 2 months)
-          </span>
-        </div>
+        {/* Toggle Removed since pricing is flat */}
 
         <div className="grid md:grid-cols-3 gap-8">
           {plans.map((plan, index) => (
@@ -164,10 +122,10 @@ const Pricing = () => {
                 {plan.name}
               </h3>
               <p className="text-5xl font-extrabold text-white mb-4">
-                ${plan.price}
+                {plan.price}
               </p>
               <p className="text-gray-400 mb-6">
-                per {isYearly ? "year" : "month"}
+                One-time investment
               </p>
 
               <ul className="space-y-4 mb-8">
