@@ -4,11 +4,12 @@ import React, { useRef, useEffect, useState } from 'react';
 interface InteractiveTextProps {
   text: string;
   className?: string;
-  as?: keyof JSX.IntrinsicElements;
+  as?: React.ElementType;
 }
 
 const InteractiveText: React.FC<InteractiveTextProps> = ({ text, className = "", as: Component = "span" }) => {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLElement>(null);
+  const spanRefs = useRef<(HTMLSpanElement | null)[]>([]);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
 
@@ -38,7 +39,13 @@ const InteractiveText: React.FC<InteractiveTextProps> = ({ text, className = "",
     };
   }, []);
 
-  const getCharacterStyle = (index: number, charRef: HTMLSpanElement | null) => {
+  // Reset refs array when text changes to avoid stale refs or memory leaks
+  useEffect(() => {
+    spanRefs.current = spanRefs.current.slice(0, text.length);
+  }, [text]);
+
+  const getCharacterStyle = (index: number) => {
+    const charRef = spanRefs.current[index];
     if (!charRef || !isHovering || !containerRef.current) return {};
 
     const rect = charRef.getBoundingClientRect();
@@ -53,7 +60,7 @@ const InteractiveText: React.FC<InteractiveTextProps> = ({ text, className = "",
 
     const maxDistance = 80;
     const force = Math.max(0, (maxDistance - distance) / maxDistance);
-    
+
     const pushX = (deltaX / distance) * force * 15;
     const pushY = (deltaY / distance) * force * 15;
 
@@ -63,23 +70,21 @@ const InteractiveText: React.FC<InteractiveTextProps> = ({ text, className = "",
     };
   };
 
+  const Tag = Component as any;
+
   return (
-    <div ref={containerRef} className={`relative inline-block ${className}`}>
-      {text.split('').map((char, index) => {
-        const spanRef = useRef<HTMLSpanElement>(null);
-        
-        return (
-          <span
-            key={index}
-            ref={spanRef}
-            className="inline-block"
-            style={getCharacterStyle(index, spanRef.current)}
-          >
-            {char === ' ' ? '\u00A0' : char}
-          </span>
-        );
-      })}
-    </div>
+    <Tag ref={containerRef} className={`relative inline-block ${className}`}>
+      {text.split('').map((char, index) => (
+        <span
+          key={index}
+          ref={(el) => { spanRefs.current[index] = el; }}
+          className="inline-block"
+          style={getCharacterStyle(index)}
+        >
+          {char === ' ' ? '\u00A0' : char}
+        </span>
+      ))}
+    </Tag>
   );
 };
 
