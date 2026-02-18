@@ -14,7 +14,7 @@ const Contact = () => {
     setChatHistory(newHistory);
     setShowOptions(false);
 
-    // Simulate bot response
+
     setTimeout(() => {
       let botResponse = "";
       if (option === "I need a high-performance website") {
@@ -55,7 +55,7 @@ const Contact = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Lead Qualifier Bot */}
+
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -74,8 +74,8 @@ const Contact = () => {
                   >
                     <div
                       className={`max-w-[80%] rounded-2xl p-4 ${msg.type === "user"
-                          ? "bg-mindforge-neon/20 text-white border border-mindforge-neon/30 rounded-br-none"
-                          : "bg-white/10 text-gray-200 border border-white/5 rounded-bl-none"
+                        ? "bg-mindforge-neon/20 text-white border border-mindforge-neon/30 rounded-br-none"
+                        : "bg-white/10 text-gray-200 border border-white/5 rounded-bl-none"
                         }`}
                     >
                       {msg.text}
@@ -107,7 +107,7 @@ const Contact = () => {
             )}
           </motion.div>
 
-          {/* Contact Info */}
+
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}

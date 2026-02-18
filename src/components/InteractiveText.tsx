@@ -39,7 +39,7 @@ const InteractiveText: React.FC<InteractiveTextProps> = ({ text, className = "",
     };
   }, []);
 
-  // Reset refs array when text changes to avoid stale refs or memory leaks
+
   useEffect(() => {
     spanRefs.current = spanRefs.current.slice(0, text.length);
   }, [text]);

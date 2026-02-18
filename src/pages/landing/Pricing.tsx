@@ -49,7 +49,7 @@ const Pricing = () => {
 
     hoverTimeoutRef.current = setTimeout(() => {
       setShowTooltip(planName);
-    }, 10000); // 10 seconds
+    }, 10000);
   };
 
   const handleMouseLeave = () => {
@@ -74,11 +74,11 @@ const Pricing = () => {
             Find a Plan That's Right For You
           </h2>
           <p className="text-lg text-gray-400 mt-4 h-8">
-            {/* Height reserved for layout stability */}
+
           </p>
         </motion.div>
 
-        {/* Toggle Removed since pricing is flat */}
+
 
         <div className="grid md:grid-cols-3 gap-8">
           {plans.map((plan, index) => (

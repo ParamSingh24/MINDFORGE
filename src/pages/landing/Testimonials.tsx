@@ -58,10 +58,10 @@ const Testimonials = () => {
             >
               <p className="text-sm md:text-base text-gray-300 italic mb-4 md:mb-6"><InteractiveText text={`"${testimonial.quote}"`} /></p>
               <div className="flex items-center">
-                {/* <img src={testimonial.avatar} alt={testimonial.name} className="w-12 h-12 rounded-full mr-4" /> */}
+
                 <div>
                   <p className="font-bold text-white text-sm md:text-base"><InteractiveText text={testimonial.name} /></p>
-                  {/* <p className="text-sm text-gray-400">{testimonial.company}</p> */}
+
                 </div>
               </div>
             </motion.div>

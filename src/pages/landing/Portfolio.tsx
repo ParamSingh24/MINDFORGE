@@ -59,7 +59,7 @@ const Portfolio = () => {
 
   return (
     <section id="portfolio" className="py-24 px-6 relative bg-mindforge-black overflow-hidden">
-      {/* Background Elements */}
+
       <div className="absolute top-20 right-0 w-96 h-96 bg-mindforge-neon/10 rounded-full blur-[100px] -z-10" />
       <div className="absolute bottom-20 left-0 w-96 h-96 bg-mindforge-green/10 rounded-full blur-[100px] -z-10" />
 
@@ -89,7 +89,7 @@ const Portfolio = () => {
               onMouseLeave={() => setHoveredIndex(null)}
               className="group relative rounded-2xl overflow-hidden bg-mindforge-gray border border-white/5 hover:border-mindforge-neon/50 transition-all duration-300 h-[500px] flex flex-col"
             >
-              {/* Image Section */}
+
               <div className="relative h-[240px] overflow-hidden">
                 <img
                   src={project.image}
@@ -98,14 +98,14 @@ const Portfolio = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-mindforge-gray via-transparent to-transparent opacity-90" />
 
-                {/* Metric Badge */}
+
                 <div className="absolute top-4 left-4 glass px-4 py-2 rounded-full border border-white/10 flex items-center space-x-2">
                   <div className="w-2 h-2 rounded-full bg-mindforge-green animate-pulse" />
                   <span className="text-xs font-bold text-white uppercase tracking-wider">{project.metric}</span>
                 </div>
               </div>
 
-              {/* Content Section */}
+
               <div className="p-6 flex-1 flex flex-col relative z-20 -mt-10">
                 <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-mindforge-neon transition-colors duration-300">
                   {project.title}
@@ -114,7 +114,7 @@ const Portfolio = () => {
                   {project.description}
                 </p>
 
-                {/* Tech Stack */}
+
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tech.map((t, i) => (
                     <span key={i} className="text-xs font-medium text-gray-500 bg-white/5 px-2 py-1 rounded">
@@ -123,7 +123,7 @@ const Portfolio = () => {
                   ))}
                 </div>
 
-                {/* Action Button */}
+
                 <a
                   href={project.live}
                   target="_blank"

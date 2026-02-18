@@ -44,7 +44,7 @@ const ChatBot = () => {
         setIsLoading(true);
 
         try {
-            // Prepare history for context (last 10 messages)
+
             const history = messages.slice(-10).map((m) => ({
                 role: m.role,
                 parts: m.text,
@@ -84,7 +84,7 @@ const ChatBot = () => {
                         transition={{ duration: 0.2 }}
                         className="fixed bottom-24 right-6 w-[90vw] md:w-[400px] h-[500px] md:h-[600px] bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl z-50 flex flex-col overflow-hidden"
                     >
-                        {/* Header */}
+
                         <div className="p-4 border-b border-white/10 flex items-center justify-between bg-white/5">
                             <div className="flex items-center gap-3">
                                 <div className="w-10 h-10 rounded-full bg-mindforge-neon/20 flex items-center justify-center border border-mindforge-neon/30">
@@ -106,7 +106,7 @@ const ChatBot = () => {
                             </button>
                         </div>
 
-                        {/* Messages */}
+
                         <div className="flex-1 overflow-y-auto p-4 space-y-4">
                             {messages.map((m) => (
                                 <div
@@ -115,11 +115,11 @@ const ChatBot = () => {
                                 >
                                     <div
                                         className={`max-w-[80%] p-3 rounded-2xl text-sm ${m.role === "user"
-                                                ? "bg-mindforge-neon/20 text-white rounded-br-none border border-mindforge-neon/20"
-                                                : "bg-white/5 text-gray-200 rounded-bl-none border border-white/5"
+                                            ? "bg-mindforge-neon/20 text-white rounded-br-none border border-mindforge-neon/20"
+                                            : "bg-white/5 text-gray-200 rounded-bl-none border border-white/5"
                                             }`}
                                     >
-                                        {/* Render basic formatting */}
+
                                         <p className="whitespace-pre-wrap">{m.text}</p>
                                     </div>
                                 </div>
@@ -135,7 +135,7 @@ const ChatBot = () => {
                             <div ref={messagesEndRef} />
                         </div>
 
-                        {/* Input */}
+
                         <div className="p-4 border-t border-white/10 bg-white/5">
                             <div className="flex gap-2">
                                 <input
@@ -162,7 +162,7 @@ const ChatBot = () => {
                 )}
             </AnimatePresence>
 
-            {/* Trigger Button */}
+
             <motion.button
                 onClick={() => setIsOpen(!isOpen)}
                 whileHover={{ scale: 1.1 }}

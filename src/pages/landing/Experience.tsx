@@ -149,7 +149,7 @@ const Experience = () => {
           </p>
         </motion.div>
 
-        {/* Work Experience */}
+
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-white mb-8 flex items-center">
             <Calendar className="w-6 h-6 mr-3 text-purple-400" />
@@ -191,7 +191,7 @@ const Experience = () => {
           </div>
         </div>
 
-        {/* Education */}
+
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-white mb-8 flex items-center">
             <Award className="w-6 h-6 mr-3 text-purple-400" />
@@ -223,7 +223,7 @@ const Experience = () => {
           </div>
         </div>
 
-        {/* Certifications */}
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
