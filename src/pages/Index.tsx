@@ -11,7 +11,6 @@ import Contact from "./landing/Contact";
 import Footer from "@/components/layout/Footer";
 import FloatingLines from "@/components/ui/FloatingLines";
 import ChatBot from "@/components/chat/ChatBot";
-import ExperienceSection from "@/components/ExperienceSection";
 
 const Index = () => {
   return (
@@ -42,7 +41,7 @@ const Index = () => {
           <Portfolio />
           <About />
           <Pricing />
-          <ExperienceSection />
+          <Experience />
           <Testimonials />
           <Contact />
         </div>
