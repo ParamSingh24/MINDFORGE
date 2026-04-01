@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 const navItems = [
   { name: 'About', href: '#about' },
   { name: 'Services', href: '#services' },
-  { name: 'Portfolio', href: '#portfolio' },
+  { name: 'Premium Services', href: '#pricing' },
   { name: 'Experience', href: '#experience' },
   { name: 'Contact', href: '#contact' },
 ];
@@ -26,7 +26,7 @@ const Header = () => {
     >
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <div className="text-2xl font-bold text-white tracking-wider">
-          <a href="#">Portfolio</a>
+          <a href="#">Premium Services</a>
         </div>
         <nav className="hidden md:flex items-center space-x-8">
           {navItems.map((item) => (

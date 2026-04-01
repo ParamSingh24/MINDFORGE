@@ -90,20 +90,20 @@ export default async function handler(req, res) {
         }
 
         const genAI = new GoogleGenerativeAI(apiKey);
-        const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-lite-001" });
+        const model = genAI.getGenerativeModel({ 
+            model: "gemini-2.5-flash-lite",
+            systemInstruction: MINDFORGE_CONTEXT 
+        });
+
+        // Gemini strictly requires history to start with user and alternate.
+        // The frontend sends the initial greeting as a 'model' turn, which we must drop.
+        let cleanHistory = (history || []).map(h => ({ role: h.role, parts: [{ text: h.parts }] }));
+        if (cleanHistory.length > 0 && cleanHistory[0].role === 'model') {
+            cleanHistory.shift(); 
+        }
 
         const chat = model.startChat({
-            history: [
-                {
-                    role: "user",
-                    parts: [{ text: `SYSTEM_PROMPT: ${MINDFORGE_CONTEXT}` }],
-                },
-                {
-                    role: "model",
-                    parts: [{ text: "Understood. I am Nexus, ready to assist for MindForge Agency." }],
-                },
-                ...(history || []).map(h => ({ role: h.role, parts: [{ text: h.parts }] }))
-            ],
+            history: cleanHistory,
             generationConfig: {
                 maxOutputTokens: 500,
             },
