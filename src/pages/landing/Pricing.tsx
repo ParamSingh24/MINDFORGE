@@ -5,7 +5,7 @@ import { Check, Info } from "lucide-react";
 const plans = [
   {
     name: "Web & App Development",
-    price: "$500",
+    price: "$5,000",
     description: "Premium full-stack web and mobile application development.",
     features: [
       "Custom Web Development (Next.js)",
@@ -16,7 +16,7 @@ const plans = [
   },
   {
     name: "Agent & Model Development",
-    price: "$850",
+    price: "$8,500",
     description: "Advanced AI agents and custom model training for your business.",
     features: [
       "Autonomous Agent Development",
@@ -27,7 +27,7 @@ const plans = [
   },
   {
     name: "Cyber & App Management",
-    price: "$999",
+    price: "$9,999",
     description: "Ongoing management, security, and maintenance for your apps.",
     features: [
       "Cyber Security Services",
