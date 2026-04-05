@@ -53,10 +53,10 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 font-light px-4"
         >
-          Specializing in{" "}
+          Premium <span className="text-white font-medium">Freelance Engineering</span> specializing in{" "}
           <span className="text-white font-medium">Agentic AI</span> and{" "}
           <span className="text-white font-medium">
-            Generative Search Optimization
+            Full-Stack Web Development
           </span>
           .
         </motion.p>

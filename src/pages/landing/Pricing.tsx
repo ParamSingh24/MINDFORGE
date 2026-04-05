@@ -121,11 +121,8 @@ const Pricing = () => {
               <h3 className="text-2xl font-bold text-white mb-2">
                 {plan.name}
               </h3>
-              <p className="text-5xl font-extrabold text-white mb-4">
-                {plan.price}
-              </p>
-              <p className="text-gray-400 mb-6">
-                One-time investment
+              <p className="text-gray-400 mb-6 mt-2 h-12">
+                {plan.description}
               </p>
 
               <ul className="space-y-4 mb-8">
@@ -137,9 +134,12 @@ const Pricing = () => {
                 ))}
               </ul>
 
-              <button className="w-full py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold transition-colors border border-white/5">
+              <a 
+                href={`mailto:codewithparamsingh@gmail.com?subject=Inquiry about ${plan.name} Services`}
+                className="w-full inline-block text-center py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold transition-colors border border-white/5"
+              >
                 Choose Plan
-              </button>
+              </a>
             </motion.div>
           ))}
         </div>

@@ -54,8 +54,8 @@ const About = () => {
           <div className="min-w-[300px]">
             <div className="grid grid-cols-3 gap-2 md:gap-8 mb-4 md:mb-8 border-b border-white/10 pb-4 md:pb-6 text-xs md:text-lg font-bold text-white">
               <div className="text-gray-500 uppercase tracking-wider">Feature</div>
-              <div className="text-gray-400">Typical Freelancer</div>
-              <div className="text-mindforge-neon">MindForge Agency</div>
+              <div className="text-gray-400">Standard Freelancer</div>
+              <div className="text-mindforge-neon">MindForge (Premium Freelance Partner)</div>
             </div>
 
             <div className="space-y-4 md:space-y-6">
